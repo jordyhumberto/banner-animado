@@ -1,0 +1,50 @@
+/*HSL significa matiz, saturación y luminosidad.
+hsl(hue, saturation, lightness)
+Matiz
+Hue es una medida de la rueda de color de 0 a 360. 0 es el rojo, el verde es de 120, 240 es azul.
+Saturación
+La saturación es un valor de porcentaje; 0% significa un tono de gris y el 100% es el color.
+Ligereza
+La ligereza es también un porcentaje; 0% es negro, 100% es de color blanco.
+*/
+
+*{
+    box-sizing: border-box;
+}
+.banner{
+    display: flex;
+    height: 40vh;
+}
+.banner__item{
+    flex:1;
+    color:#fff;
+    font-weight: bold;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: flex-grow 0.2s;
+}
+.banner__item:hover{
+    flex-grow: 10;
+}
+.banner__item:hover .banner__title{
+    transform: rotate(0);
+}
+.banner__item:nth-child(1){
+    background: hsl(90, 100%, 40%);
+}
+.banner__item:nth-child(2){
+    background: hsl(30, 100%, 40%);
+}
+.banner__item:nth-child(3){
+    background: hsl(200, 100%, 40%);
+}
+.banner__item:nth-child(4){
+    background: hsl(280, 100%, 40%);
+}
+.banner__title{
+    margin:0;
+    transform: rotate(-90deg);
+    transition: transform 0.2s 0.2s;
+}
